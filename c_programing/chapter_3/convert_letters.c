@@ -11,7 +11,7 @@ int main(void)
 	if((letter >= 'A') && (letter <= 'Z')) /*verify uppercase letter*/
 	{
 		letter += 'a' - 'A';   /*convert to lowercase*/
-		printf("You entered an uppercase %c \n");
+		printf("You entered an uppercase %c \n", letter);
 	}
 	else
 		printf("You did not enter an uppercase letter\n");
