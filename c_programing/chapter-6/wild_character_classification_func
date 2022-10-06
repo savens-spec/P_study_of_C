@@ -1,0 +1,12 @@
+Function Tests For
+iswlower() Lowercase letter
+iswupper() Uppercase letter
+iswalnum() Uppercase or lowercase letter
+iswcntrl() Control character
+iswprint() Any printing character including space
+iswgraph() Any printing character except space
+iswdigit() Decimal digit (L'0' to L'9')
+iswxdigit() Hexadecimal digit (L'0' to L'9', L'A' to L'F', L'a' to L'f')
+iswblank() Standard blank characters (space, L'\t')
+iswspace() Whitespace character (space, L'\n', L'\t', L'\v', L'\r', L'\f')
+iswpunct() Printing character for which iswspace() and iswalnum() return false
