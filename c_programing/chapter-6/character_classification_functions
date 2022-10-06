@@ -1,1 +1,13 @@
-i
+Function Tests For
+islower() Lowercase letter
+isupper() Uppercase letter
+isalpha() Uppercase or lowercase letter
+isalnum() Uppercase or lowercase letter or a digit
+iscntrl() Control character
+isprint() Any printing character including space
+isgraph() Any printing character except space
+isdigit() Decimal digit ('0' to '9')
+isxdigit() Hexadecimal digit ('0' to '9', 'A' to 'F', 'a' to 'f')
+isblank() Standard blank characters (space, '\t')
+isspace() Whitespace character (space, '\n', '\t', '\v', '\r', '\f')
+ispunct() Printing character for which isspace() and isalnum() return false
