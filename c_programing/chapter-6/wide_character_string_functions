@@ -1,0 +1,47 @@
+Function Description
+wcslen(const wchar_t* ws) Returns a value of type size_t that is the length of the 
+wide character string ws that you pass as the argument. 
+The length excludes the termination L'\0' character.
+wcscpy(wchar_t* destination, 
+ const wchar_t source)
+Copies the wide character string source to the wide character string destination. The function returns source.
+wcsncpy(wchar_t* destination, 
+ const wchar_t source, size_t n)
+Copies n characters from the wide character string 
+source to the wide character string destination. 
+If source contains less than n characters, destination
+is padded with L'\0' characters. The function 
+returns source.
+wcscat(whar_t* ws1, 
+ whar_t* ws2)
+Appends a copy of ws2 to ws1. The first character of ws2
+overwrites the terminating null at the end of ws1. The 
+function returns ws1.
+wcsncmp(const wchar_t* ws1, 
+ const wchar_t* ws2)
+Compares the wide character string pointed to by ws1
+with the wide character string pointed to by ws2 and 
+returns a value of type int that is less than, equal to, or 
+greater than 0 if the string ws1 is less than, equal to, 
+or greater than the string ws2.
+wcscmp(const wchar_t* ws1, 
+ const wchar_t* ws2, size_t n)
+Compares up to n characters from the wide character 
+string pointed to by ws1 with the wide character string 
+pointed to by ws2. The function returns a value of type 
+int that is less than, equal to, or greater than 0 if the 
+string of up to n characters from ws1 is less than, equal 
+to, or greater than the string of up to n characters 
+from ws2.
+wcschr(const wchar_t* ws, 
+ wchar_t wc)
+Returns a pointer to the first occurrence of the wide 
+character, wc, in the wide character string pointed to 
+by ws. If wc is not found in ws, the NULL pointer value 
+is returned.
+wcsstr(const wchar_t* ws1, 
+ const wchar_t* ws2)
+Returns a pointer to the first occurrence of the wide 
+character string ws2 in the wide character string ws1. 
+If ws2 is not found in ws1, the NULL pointer value is 
+returned.
