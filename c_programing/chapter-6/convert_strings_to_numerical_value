@@ -1,0 +1,5 @@
+Function Returns
+atof() A value of type double that is produced from the string argument
+atoi() A value of type int that is produced from the string argument
+atol() A value of type long that is produced from the string argument
+atoll() A value of type long long that is produced from the string argument
