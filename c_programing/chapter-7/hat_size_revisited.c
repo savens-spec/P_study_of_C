@@ -33,35 +33,34 @@ int main(void)
 		/*find head size in the headsize array*/
 		if(your_head > *(pheadsize + i)
 			continue;
-
-	/*
-	 * if it is the first element and the head size is
-	 * more than 1/8 smaller than the head is too small
-	 * for a hat
-	 */
-	if((i == 0) && (your_head < (*pheadsize)-1))
-	{
-		printf("\nYou are the proverbial pinhead. no hat for"
+		/*
+	 	 * if it is the first element and the head size is
+	 	 * more than 1/8 smaller than the head is too small
+	 	 * for a hat
+	  	*/
+		if((i == 0) && (your_head < (*pheadsize)-1))
+		{
+			printf("\nYou are the proverbial pinhead. no hat for"
 				" you i'm afraid.\n");
-		too_small = true;
-		break;     /*exit the loop*/
-	}
+			too_small = true;
+			break;     /*exit the loop*/
+		}
 
-	/*
-	 * if head size is more that 1/8 smaller than the current
-	 * element in headsize array, take the next element down
-	 * as the head size
-	 */
-	if(your_head < *(pheadsize + i) - 1)
-		i--;
+		/*
+	 	 * if head size is more that 1/8 smaller than the current
+		 * element in headsize array, take the next element down
+		 * as the head size
+	 	*/
+		if(your_head < *(pheadsize + i) - 1)
+			i--;
 
-	printf("\nYour hat size is %c %c%c%c\n"
+		printf("\nYour hat size is %c %c%c%c\n"
 			*(psize + i),  /*first row od size*/
 			*(psize + 1*12 + i), /*secound row od size*/
 			*(i == 4) ?' ' : '/', 
 			*(psizw + 2*12 + i));  /*third row of size*/
-	hat_found = true;
-	break;
+		hat_found = true;
+		break;
 	}
 	if(!hat_found && !too_small)
 		printf("\nYou, in technical parlance, are a fathead."
