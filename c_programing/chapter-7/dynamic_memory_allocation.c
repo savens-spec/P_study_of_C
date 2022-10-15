@@ -7,7 +7,7 @@ int main(void)
 {
 	unsigned long *primes = NULL;    /*pointer to prime storage area*/
 	unsigned long trial = 0;        /*integer to tested*/
-	bool found = found;             /*indicate when we find a prime*/
+	bool found = false;             /*indicate when we find a prime*/
 	size_t total = 0;               /*number of prime required*/
 	size_t count = 0;               /*number of prime found*/
 
@@ -41,7 +41,8 @@ int main(void)
 		 * if any divide exactly - the number is not prime
 		 */
 		for(size_t i = 0  ; i < count ; i++)
-			break;         /*exit if no remainder*/
+			if(!(found = (trial % *(primes + i))))
+				break;         /*exit if no remainder*/
 
 		if(found)              /*we got one - if found is true*/
 			*(primes + count++) = trial;    /*store it and increment count*/
@@ -50,7 +51,7 @@ int main(void)
 	/*display prime 5-up*/
 	for(size_t i = 0 ; i < total ; i++)
 	{
-		if(!(1%5U))
+		if(!(i%5U))
 			printf("\n");     /*newline after every 5*/
 		printf("%12lu", *(primes + i));
 	}
